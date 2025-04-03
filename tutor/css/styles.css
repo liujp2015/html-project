@@ -44,7 +44,8 @@ img {
 }
 
 .navbar {
-  background: black;
+  /* background: black; */
+  background: transparent;
   color: white;
   padding: 1rem 2rem;
   position: fixed;
@@ -114,6 +115,7 @@ img {
   padding: 11.5rem 2rem 8rem;
   overflow-x: hidden;
   color: white;
+  position: relative;
 }
 .hero .hero-flex {
   display: flex;
@@ -141,6 +143,39 @@ img {
   margin-right: -100px;
 }
 
+.hero .frame-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .hero .hero-flex {
+    gap: 2rem;
+  }
+  .hero img {
+    max-width: 500px;
+    margin-right: 0px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+  }
+  .hero-flex {
+    flex-direction: column;
+    /* padding-bottom: 4rem; */
+  }
+  .hero img {
+    max-width: 600px;
+    margin-top: 2rem;
+  }
+}
 @media (max-width: 768px) {
   .navbar .main-menu-items {
     display: none;
@@ -151,5 +186,17 @@ img {
   .navbar .mobile-menu-toggle {
     display: block;
     padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero img {
+    max-width: 350px;
   }
 }
