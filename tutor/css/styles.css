@@ -30,8 +30,11 @@ li {
 img {
   max-width: 100%;
 }
+.text-primary {
+  color: var(--primary-color);
+}
 
-.section {
+.text-sec .section {
   margin: 4rem 0;
 }
 .section-header {
@@ -260,6 +263,22 @@ img {
   width: 50%;
 }
 
+.takeaways-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+
+.takeaways-cards .card {
+  flex-direction: row;
+  text-align: left;
+}
+
+.takeaways-cards .card i {
+  margin-right: 1rem;
+}
+
 @media (max-width: 1200px) {
   .hero .hero-flex {
     gap: 2rem;
@@ -286,6 +305,9 @@ img {
     margin-top: 2rem;
   }
   .chapter-cards {
+    grid-template-columns: 1fr;
+  }
+  .takeaways-cards {
     grid-template-columns: 1fr;
   }
 }
